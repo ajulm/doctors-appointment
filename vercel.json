@@ -11,10 +11,6 @@
       "dest": "/static/$1"
     },
     {
-      "src": "/staticfiles/(.*)",
-      "dest": "/staticfiles/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "vercel_app/wsgi.py"
     }
