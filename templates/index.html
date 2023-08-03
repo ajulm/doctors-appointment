@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajul</title>
+    <link rel="shortcut icon" href="{% static 'assets/images/icon.png' %}" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Google Fonts Tag -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"  >
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Inria Serif', serif;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+        }
+    </style>
+    
+    
+
+    
+</head>
+<body>
+    
+    
+    <div style="background-color: #f5f5f5; ">
+        <div class="container py-5 ">
+            <div class="row justify-content-center ">
+                <div class="col-md-10 ">
+
+                    <div class="row no-gutters ">
+                        <div class="col-lg ">
+                            <div class="text-center ">
+                                <img src="{% static 'assets/images/ajul.jpg' %}" class="img-fluid rounded-circle " width="200" height="100" alt="profile_image">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 ">
+
+                            <div class="mt-4 ">
+                                <h1>Hi, Im Ajul!</h1>
+                                <p class="text-muted ">I love coding, doing research and sharing what I learn with
+                                    others 😉 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4 mb-5">
+        <!-- <div class="text-right">
+            <a class="btn text-white" style="background:#ed0f0f;" onclick="javascript:sendEvent()"> Button </a>
+        </div> -->
+        <h4> My Projects</h4>
+        <div class="mt-4">
+            <div class="table-responsive-md">
+                <table class="table table-striped" id="myTable" width="100%" cellspacing="1">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>URL</th>
+                            <th>Created At</th>
+                            <th>language</th>
+                        </tr>
+                    </thead>
+                    <tbody id="container">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/js/index.js' %}" defer></script>
+</body>
+</html>
