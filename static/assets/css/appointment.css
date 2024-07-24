@@ -1,0 +1,55 @@
+/* Appointment Form Styling Starts Here*/
+.appointment-form {
+  padding: 80px 0;
+}
+.appointment-form .appointment-form-wrapper {
+  border: 1px solid #008586;
+  padding: 24px 16px;
+  border-radius: 12px;
+}
+.appointment-form h2 {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 992px) {
+  .appointment-form {
+    padding: 120px 0;
+  }
+  .appointment-form .appointment-form-wrapper {
+    padding: 20px;
+  }
+  .appointment-form h2 {
+    margin-bottom: 40px;
+  }
+}
+/* Appointment Verification */
+.auth {
+  padding: 80px 0;
+}
+.auth .auth-content {
+  max-width: 388px;
+  text-align: center;
+  margin: 0 auto;
+}
+.auth .auth-content h2 {
+  margin-bottom: 32px;
+}
+.auth .auth-content p {
+  margin-bottom: 40px;
+}
+.auth .auth-content .auth-image {
+  margin-bottom: 12px;
+}
+.auth .auth-content .auth-btn-group a:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+  .auth {
+    padding: 120px 0;
+  }
+  .auth .auth-content h2 {
+    margin-bottom: 40px;
+  }
+}
+/* Success Styling*/

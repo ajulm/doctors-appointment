@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtuCare - Your Online Health Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/appointment.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+  </head>
+  <body>
+    <section class="auth verify-message">
+      <div class="container">
+        <div class="auth-content">
+          <h2>Check Your Email</h2>
+
+          <p>
+            We've sent and email to the address <strong>{{object.customer_email}}</strong>. Please check your inbox (and your spam folder, just in case) for
+            and email from <strong>VirtuCare</strong>.
+          </p>
+
+          <form method="post">
+            {% csrf_token %}
+
+            <div class="input-field">
+              <input type="text" name="otp" placeholder="OTP" required/>
+            </div>
+
+            <button type="submit" class="af-btn-outlined">Verify OTP</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

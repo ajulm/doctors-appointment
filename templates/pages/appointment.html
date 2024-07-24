@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtuCare - Your Online Health Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/appointment.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+  </head>
+  <body>
+    <section class="appointment-form">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="af-image">
+              <img src="{% static 'assets/images/05.png' %}" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="appointment-form-wrapper">
+              <h2 class="text-center">Make An Appointment</h2>
+
+              <form id="appointment-form" method="post">
+                {% csrf_token %}
+
+                <div class="input-field">
+                  <select name='type' required>
+                    <option disabled selected>Choose a Doctor</option>
+                    {% for key, value in types.items %}
+                    <option value="{{key}}">{{value}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="input-field">
+                  <input type="text" name='name' placeholder="Your Name" required />
+                </div>
+                <div class="input-field">
+                  <input type="number" name='phone' placeholder="Your Phone Number" required />
+                </div>
+                <div class="input-field">
+                  <input type="email" name='email' placeholder="Your Email" required />
+                </div>
+                <div class="input-field">
+                  <p>Scheduled Date</p>
+                  <input type="date" required />
+                  <span class="error-message">Error Message</span>
+                </div>
+
+                <button type="submit" class="af-btn-outlined" id="book-now">Book Now</button>
+                <a href="{% url 'index' %}" class="af-btn-outlined">Back</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>

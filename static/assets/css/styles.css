@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "Jost", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+input,
+button,
+select {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #008586;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #1a1a1a;
+}
+input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+  color: #646464;
+}
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #646464;
+}
+
+p {
+  margin-bottom: 0;
+  color: #646464;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+a:hover {
+  color: initial;
+}
+
+/*Utility Classes*/
+.input-field {
+  margin-bottom: 16px;
+}
+.input-field:last-of-type {
+  margin-bottom: 40px;
+}
+.input-field .error-message {
+  display: none;
+}
+.input-field.error .error-message {
+  display: inline-block;
+  margin-top: 4px;
+  color: #d41717;
+}
+
+.section-gap {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  margin-bottom: 0;
+}
+.section-title h2 span {
+  color: #008586;
+}
+
+.af-btn-outlined {
+  border: 1px solid #008586;
+  border-radius: 5px;
+  padding: 8px 32px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+.af-btn-outlined:hover {
+  background-color: #008586;
+  color: #fff;
+}
+
+.af-btn-filled {
+  background-color: #008586;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 0;
+  transition: opacity 0.3s ease-in-out;
+  display: inline-block;
+}
+.af-btn-filled:hover {
+  opacity: 0.5;
+  color: #fff;
+}
+
+.af-btn-text {
+  color: #008586;
+  display: inline-block;
+}
+.af-btn-text:hover {
+  color: #008586;
+  opacity: 0.8;
+}
+.af-btn-text svg path {
+  fill: #008586;
+}

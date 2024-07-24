@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtuCare - Your Online Health Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/appointment.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/page-banner.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/about-us.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/team.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content d-flex justify-content-between align-items-center">
+          <div class="d-flex ham-group align-items-center">
+            <button type="button " class="d-lg-none ham-icon">
+              <img src="{% static 'assetsimages/ham.svg' %}" alt="" class="img-fluid" />
+            </button>
+            <a href="/" class="header-logo"> <span>Virtu</span>Care </a>
+          </div>
+          <ul class="primary-menu d-lg-flex justify-content-end align-items-center">
+            <li class="d-lg-none d-flex justify-content-between mobile-header">
+              <a href="/" class="header-logo"> <span>Virtu</span>Care </a>
+              <button type="button" class="ham-close">
+                <img src="{% static 'assets/images/close-icon.svg' %}" alt="" class="img-fluid" />
+              </button>
+            </li>
+            <li>
+              <a href="#about-us"> About Us </a>
+            </li>
+            <li>
+              <a href="#doctors"> Doctors </a>
+            </li>
+            <li class="d-none d-lg-block">
+              <a href="{% url 'appointment' %}" class="af-btn-filled">Appointment</a>
+            </li>
+          </ul>
+          <a href="{% url 'appointment' %}" class="af-btn-filled d-lg-none">Appointment</a>
+        </div>
+      </div>
+    </header>
+    <a href="#" class="overlay"></a>
+
+    <main>
+      <section class="page-banner section-gap">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 col-xl-5">
+              <div class="pb-image">
+                <img src="{% static 'assets/images/05.png' %}" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="pb-content">
+                <h1>We take care of your health</h1>
+                <p>A person who has good physical health is likely to have bodily function and processes working at their peak.</p>
+                <a href="{% url 'appointment' %}" class="af-btn-outlined">Book An Appointment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us section-gap" id="about-us">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="text-md-center">About Us</h2>
+          </div>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6 col-xl-5">
+              <div class="about-image">
+                <img src="{% static 'assets/images/about-featured.jpg' %}" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-content">
+                <h2>Take The World's Best Quality Treatment</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet exercitationem sunt assumenda aperiam, maxime ea at
+                  repellendus temporibus facere, magni, in voluptate non neque tenetur dicta officiis asperiores aliquid.
+                </p>
+                <p>A person who has good physical health is likely to have bodily function and processes working at their peak.</p>
+                <a href="#" class="af-btn-outlined">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team section-gap" id="doctors">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="text-md-center">Our <span>Doctors</span></h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="team-member">
+                <div class="tm-image">
+                  <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
+                </div>
+                <div class="tm-content">
+                  <h3>Dr. Arjun Jhukal</h3>
+                  <p>Neurologist</p>
+
+                  <ul class="d-flex justify-content-center">
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="team-member">
+                <div class="tm-image">
+                  <img src="{% static 'assets/images/doctor-02.jpg' %}" alt="" class="img-fluid" />
+                </div>
+                <div class="tm-content">
+                  <h3>Dr. Ajul Shrestha</h3>
+                  <p>Neurologist</p>
+
+                  <ul class="d-flex justify-content-center">
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="team-member">
+                <div class="tm-image">
+                  <img src="{% static 'assets/images/doctor-03.jpg' %}" alt="" class="img-fluid" />
+                </div>
+                <div class="tm-content">
+                  <h3>Prof. Ramesh Bohara</h3>
+                  <p>Neurologist</p>
+
+                  <ul class="d-flex justify-content-center">
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="team-member">
+                <div class="tm-image">
+                  <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
+                </div>
+                <div class="tm-content">
+                  <h3>Dr. John Doe</h3>
+                  <p>Neurologist</p>
+
+                  <ul class="d-flex justify-content-center">
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>

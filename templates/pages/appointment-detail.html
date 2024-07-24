@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtuCare - Your Online Health Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/appointment.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
+    <style>
+        .appointment-details {
+            margin-bottom: 20px; /* Example margin for spacing */
+        }
+        
+        .d-flex {
+            display: flex;
+            margin-bottom: 8px; /* Adjust spacing between items */
+        }
+        
+        .d-flex h4 {
+            margin-right: 10px; /* Space between label and value */
+            font-weight: bold;
+        }
+        
+        .d-flex p {
+            margin: 0; /* Remove default margin for paragraphs */
+            text-transform: capitalize; /* Apply text transformation */
+        }
+    </style>
+  </head>
+  <body>
+    <section class="appointment-form">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="af-image">
+              <img src="{% static 'assets/images/05.png' %}" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="appointment-form-wrapper">
+              <h2 class="text-center">Appointment Details</h2>
+
+                <div class="appointment-details">
+                    <div class="d-flex">
+                        <h4>Doctor:</h4>
+                        <p>{{ object.type }}</p>
+                    </div>
+                    <div class="d-flex">
+                        <h4>Email:</h4>
+                        <p>{{ object.customer_email }}</p>
+                    </div>
+                    <div class="d-flex">
+                        <h4>Name:</h4>
+                        <p>{{ object.name }}</p>
+                    </div>
+                    <div class="d-flex">
+                        <h4>Phone:</h4>
+                        <p>{{ object.phone }}</p>
+                    </div>
+                    <div class="d-flex">
+                        <h4>Scheduled Date:</h4>
+                        <p>{{ object.scheduled_date }}</p>
+                    </div>
+                </div>
+            
+                <a href="{% url 'index' %}" class="af-btn-outlined">Back</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>
