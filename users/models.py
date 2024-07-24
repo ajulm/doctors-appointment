@@ -63,8 +63,8 @@ class CustomUserManager(BaseUserManager):
 
 
 ROLE_CHOICES = (
+    ("doctor", "Doctor"),
     ("admin", "Admin"),
-    ("doctor", "Doctor")
 )
 
 
