@@ -137,7 +137,7 @@ class Appointment(models.Model):
         super().save(*args, **kwargs)
 
     def send_email(self):
-        subject = 'Welcome to VirtuCare'
+        subject = 'Welcome to HealthEase'
         message = f"""Hi {self.name}, \n\nYour code is {self.code} \n\nThank you for registering your appointment."""
         email_from = "admin@virtucare.com"
         recipient_list = [self.customer_email, ]
