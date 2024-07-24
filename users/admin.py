@@ -23,7 +23,7 @@ class CustomUserAdmin(admin.ModelAdmin):
     model = CustomUser
     fieldsets = (
         (None, {"fields": (
-            "email", "password", "role"
+            "first_name", "last_name", "email", "password", "role"
         )}),
         ("Permissions", {"fields": ("is_staff", "user_permissions")}),
     )
