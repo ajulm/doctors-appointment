@@ -21,6 +21,9 @@ $(function () {
   $(document).ready(function() {
     $("#appointment-form").on('submit', function(e) {
         e.preventDefault();  // Prevent the default form submission
+        var button = document.getElementById("book-now");
+        button.disabled = true;
+
         
         // Fetch CSRF token from cookies (Django's recommended method)
         var csrftoken = $("#appointment-form input[name='csrfmiddlewaretoken']").val();

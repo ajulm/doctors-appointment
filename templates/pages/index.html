@@ -29,7 +29,7 @@
             <li class="d-lg-none d-flex justify-content-between mobile-header">
               <a href="/" class="header-logo"> <span>Virtu</span>Care </a>
               <button type="button" class="ham-close">
-                <img src="{% static 'assets/images/close-icon.svg' %}" alt="" class="img-fluid" />
+                <img src="{% static 'assets/images/img.jpeg' %}" alt="" class="img-fluid" />
               </button>
             </li>
             <li>
@@ -39,7 +39,7 @@
               <a href="#doctors"> Doctors </a>
             </li>
             <li class="d-none d-lg-block">
-              <a href="{% url 'appointment' %}" class="af-btn-filled">Appointment</a>
+              <a href="{% url 'appointment' %}" class="af-btn-filled">Appointment Now</a>
             </li>
           </ul>
           <a href="{% url 'appointment' %}" class="af-btn-filled d-lg-none">Appointment</a>
@@ -54,14 +54,14 @@
           <div class="row justify-content-between align-items-center">
             <div class="col-md-6 col-xl-5">
               <div class="pb-image">
-                <img src="{% static 'assets/images/05.png' %}" alt="" class="img-fluid" />
+                <img src="{% static 'assets/images/rafiki.svg' %}" alt="" class="img-fluid"/>
               </div>
             </div>
             <div class="col-md-6">
               <div class="pb-content">
                 <h1>We take care of your health</h1>
                 <p>A person who has good physical health is likely to have bodily function and processes working at their peak.</p>
-                <a href="{% url 'appointment' %}" class="af-btn-outlined">Book An Appointment</a>
+                <a href="{% url 'appointment' %}" class="af-btn-outlined" style="color: #5cbdaa;">Appointment Now</a>
               </div>
             </div>
           </div>
@@ -83,10 +83,85 @@
               <div class="about-content">
                 <h2>Take The World's Best Quality Treatment</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet exercitationem sunt assumenda aperiam, maxime ea at
-                  repellendus temporibus facere, magni, in voluptate non neque tenetur dicta officiis asperiores aliquid.
+                  We started with a simple but challenging ethos, which we have tried to keep to this day.
+                  That was to provide affordable, holistic and quality primary healthcare. We wanted to individualise health care plans for patients who came from all walks of life.
                 </p>
-                <p>A person who has good physical health is likely to have bodily function and processes working at their peak.</p>
+                <a href="#" class="af-btn-outlined">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="services section-gap" id="services">
+
+      <p> <span>Health</span>Ease </P>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Checkups and Tests</h3>
+                <p>Stay on top of your health with regular checkups and tests.</p>
+                <a href="services/checkups.html" class="btn">Explore Now<span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>24/7 Ambulance</h3>
+                <p>24/7 care you can count on, anytime, anywhere.</p>
+                <a href="services/ambulance.html" class="btn">Find Ambulances<span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert Doctors</h3>
+                <p>The expert care you need, right when you need it.</p>
+                <a href="services/ourDoctors.html" class="btn">Find Doctors<span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>Medicines and Medical Equipment</h3>
+                <p>Medicines and Medical equipment provided by best trusted partners in healthcare </p>
+                <a href="services/store.html" class="btn">Buy Now<span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-bed"></i>
+                <h3>Bed Facility</h3>
+                <p>Where healing meets compassion - your health is our top priority </p>
+                <a href="services/hospitals.html" class="btn">Find Hospitals<span class="fas fa-chevron-right"></span> </a>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Stay Connected For New Services</h3>
+                <p>Access to quality medical care, no matter where you are.</p>
+            </div>
+    
+        </div>
+    
+    </section>
+    
+
+      <section class="about-us section-gap" id="about-us">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="text-md-center">Our Services</h2>
+          </div>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6 col-xl-5">
+              <div class="about-image">
+                <img src="{% static 'assets/images/doc.jpg' %}" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-content">
+                <h2>Take The World's Best Quality Treatment</h2>
+                <p>
+                  Despite the increasing costs of practice, we have endeavoured to maintain the same quality care at the same affordability when we first started.
+                </p>
                 <a href="#" class="af-btn-outlined">Learn More</a>
               </div>
             </div>
@@ -107,7 +182,7 @@
                 </div>
                 <div class="tm-content">
                   <h3>Dr. Arjun Jhukal</h3>
-                  <p>Neurologist</p>
+                  <p>Dentist</p>
 
                   <ul class="d-flex justify-content-center">
                     <li>
@@ -131,7 +206,7 @@
                 </div>
                 <div class="tm-content">
                   <h3>Dr. Ajul Shrestha</h3>
-                  <p>Neurologist</p>
+                  <p>Physician</p>
 
                   <ul class="d-flex justify-content-center">
                     <li>
@@ -179,7 +254,7 @@
                 </div>
                 <div class="tm-content">
                   <h3>Dr. John Doe</h3>
-                  <p>Neurologist</p>
+                  <p>Gynecologist</p>
 
                   <ul class="d-flex justify-content-center">
                     <li>
