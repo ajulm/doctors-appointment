@@ -1,287 +1,387 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealthEase - Your Online Health Assistant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthEase</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/appointment.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/header.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/header.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'assets/css/page-banner.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/about-us.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/team.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/styles.media.css' %}" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header-content d-flex justify-content-between align-items-center">
-          <div class="d-flex ham-group align-items-center">
-            <button type="button " class="d-lg-none ham-icon">
-              <img src="{% static 'assetsimages/ham.svg' %}" alt="" class="img-fluid" />
-            </button>
-            <a href="/" class="header-logo"> <span>Health</span>Ease </a>
+
+    <link rel="stylesheet" href="{% static 'media-care/css/style.css' %}">
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> HealthEase </a>
+
+    <nav class="navbar">
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#doctors">doctors</a>
+        <a href="{% url 'appointment' %}" class="btn"> Appointment Now <span class="fas fa-chevron-right"></span> </a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="{% static 'media-care/image/home-img.svg' %}" alt="">
+    </div>
+
+    <div class="content">
+        <h3>We take care of your health</h3>
+        <p>A person who has good physical health is likely to have bodily function and processes working at their peak.        </p>
+        <a href="{% url 'appointment' %}" class="btn"> Appointment Now <span class="fas fa-chevron-right"></span> </a>
+    </div>
+</section>
+
+<!-- home section ends -->
+
+<section class="team section-gap pt-5" id="doctors">
+  <div class="container mt-5">
+    <div class="section-title">
+      <h2 class="text-md-center">Our <span>Doctors</span></h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="team-member">
+          <div class="tm-image">
+            <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
           </div>
-          <ul class="primary-menu d-lg-flex justify-content-end align-items-center">
-            <li class="d-lg-none d-flex justify-content-between mobile-header">
-              <a href="/" class="header-logo"> <span>Virtu</span>Care </a>
-              <button type="button" class="ham-close">
-                <img src="{% static 'assets/images/img.jpeg' %}" alt="" class="img-fluid" />
-              </button>
-            </li>
-            <li>
-              <a href="#about-us"> About Us </a>
-            </li>
-            <li>
-              <a href="#doctors"> Doctors </a>
-            </li>
-            <li class="d-none d-lg-block">
-              <a href="{% url 'appointment' %}" class="af-btn-filled">Appointment Now</a>
-            </li>
-          </ul>
-          <a href="{% url 'appointment' %}" class="af-btn-filled d-lg-none">Appointment</a>
+          <div class="tm-content">
+            <h3>Dr. Arjun Jhukal</h3>
+            <p>Dentist</p>
+
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </header>
-    <a href="#" class="overlay"></a>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-member">
+          <div class="tm-image">
+            <img src="{% static 'assets/images/doctor-02.jpg' %}" alt="" class="img-fluid" />
+          </div>
+          <div class="tm-content">
+            <h3>Dr. Ajul Shrestha</h3>
+            <p>Physician</p>
 
-    <main>
-      <section class="page-banner section-gap">
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 col-xl-5">
-              <div class="pb-image">
-                <img src="{% static 'assets/images/rafiki.svg' %}" alt="" class="img-fluid"/>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="pb-content">
-                <h1>We take care of your health</h1>
-                <p>A person who has good physical health is likely to have bodily function and processes working at their peak.</p>
-                <a href="{% url 'appointment' %}" class="af-btn-outlined" style="color: #5cbdaa;">Appointment Now</a>
-              </div>
-            </div>
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-
-      <section class="about-us section-gap" id="about-us">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-md-center">About Us</h2>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-member">
+          <div class="tm-image">
+            <img src="{% static 'assets/images/doctor-03.jpg' %}" alt="" class="img-fluid" />
           </div>
-          <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 col-xl-5">
-              <div class="about-image">
-                <img src="{% static 'assets/images/about-featured.jpg' %}" alt="" class="img-fluid" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="about-content">
-                <h2>Take The World's Best Quality Treatment</h2>
-                <p>
-                  We started with a simple but challenging ethos, which we have tried to keep to this day.
-                  That was to provide affordable, holistic and quality primary healthcare. We wanted to individualise health care plans for patients who came from all walks of life.
-                </p>
-                <a href="#" class="af-btn-outlined">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div class="tm-content">
+            <h3>Prof. Ramesh Bohara</h3>
+            <p>Neurologist</p>
 
-    <section class="services section-gap" id="services">
-
-      <p> <span>Health</span>Ease </P>
-    
-        <div class="box-container">
-    
-            <div class="box">
-                <i class="fas fa-notes-medical"></i>
-                <h3>Checkups and Tests</h3>
-                <p>Stay on top of your health with regular checkups and tests.</p>
-                <a href="services/checkups.html" class="btn">Explore Now<span class="fas fa-chevron-right"></span> </a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-ambulance"></i>
-                <h3>24/7 Ambulance</h3>
-                <p>24/7 care you can count on, anytime, anywhere.</p>
-                <a href="services/ambulance.html" class="btn">Find Ambulances<span class="fas fa-chevron-right"></span> </a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-user-md"></i>
-                <h3>Expert Doctors</h3>
-                <p>The expert care you need, right when you need it.</p>
-                <a href="services/ourDoctors.html" class="btn">Find Doctors<span class="fas fa-chevron-right"></span> </a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-pills"></i>
-                <h3>Medicines and Medical Equipment</h3>
-                <p>Medicines and Medical equipment provided by best trusted partners in healthcare </p>
-                <a href="services/store.html" class="btn">Buy Now<span class="fas fa-chevron-right"></span> </a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-bed"></i>
-                <h3>Bed Facility</h3>
-                <p>Where healing meets compassion - your health is our top priority </p>
-                <a href="services/hospitals.html" class="btn">Find Hospitals<span class="fas fa-chevron-right"></span> </a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-heartbeat"></i>
-                <h3>Stay Connected For New Services</h3>
-                <p>Access to quality medical care, no matter where you are.</p>
-            </div>
-    
-        </div>
-    
-    </section>
-    
-
-      <section class="about-us section-gap" id="about-us">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-md-center">Our Services</h2>
-          </div>
-          <div class="row justify-content-between align-items-center">
-            <div class="col-lg-6 col-xl-5">
-              <div class="about-image">
-                <img src="{% static 'assets/images/doc.jpg' %}" alt="" class="img-fluid" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="about-content">
-                <h2>Take The World's Best Quality Treatment</h2>
-                <p>
-                  Despite the increasing costs of practice, we have endeavoured to maintain the same quality care at the same affordability when we first started.
-                </p>
-                <a href="#" class="af-btn-outlined">Learn More</a>
-              </div>
-            </div>
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-
-      <section class="team section-gap" id="doctors">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-md-center">Our <span>Doctors</span></h2>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-member">
+          <div class="tm-image">
+            <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
           </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div class="team-member">
-                <div class="tm-image">
-                  <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
-                </div>
-                <div class="tm-content">
-                  <h3>Dr. Arjun Jhukal</h3>
-                  <p>Dentist</p>
+          <div class="tm-content">
+            <h3>Dr. John Doe</h3>
+            <p>Gynecologist</p>
 
-                  <ul class="d-flex justify-content-center">
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="team-member">
-                <div class="tm-image">
-                  <img src="{% static 'assets/images/doctor-02.jpg' %}" alt="" class="img-fluid" />
-                </div>
-                <div class="tm-content">
-                  <h3>Dr. Ajul Shrestha</h3>
-                  <p>Physician</p>
-
-                  <ul class="d-flex justify-content-center">
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="team-member">
-                <div class="tm-image">
-                  <img src="{% static 'assets/images/doctor-03.jpg' %}" alt="" class="img-fluid" />
-                </div>
-                <div class="tm-content">
-                  <h3>Prof. Ramesh Bohara</h3>
-                  <p>Neurologist</p>
-
-                  <ul class="d-flex justify-content-center">
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="team-member">
-                <div class="tm-image">
-                  <img src="{% static 'assets/images/doctor-01.jpg' %}" alt="" class="img-fluid" />
-                </div>
-                <div class="tm-content">
-                  <h3>Dr. John Doe</h3>
-                  <p>Gynecologist</p>
-
-                  <ul class="d-flex justify-content-center">
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <ul class="d-flex justify-content-center">
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/facebook.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{% static 'assets/images/instagram.svg' %}" alt="" class="img-fluid" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static 'assets/js/main.js' %}"></script>
-  </body>
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading my-5"> our <span>services</span> </h1>
+
+    <div class="box-container pb-5">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>Checkups and Tests</h3>
+            <p>Stay on top of your health with regular checkups and tests.</p>
+            <a href="#home" class="btn">Explore Now<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 Ambulance</h3>
+            <p>24/7 care you can count on, anytime, anywhere.</p>
+            <a href="#home" class="btn">Find Ambulances<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>Expert Doctors</h3>
+            <p>The expert care you need, right when you need it.</p>
+            <a href="#doctors" class="btn">Find Doctors<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>Medicines and Medical Equipment</h3>
+            <p>Medicines and Medical equipment provided by best trusted partners in healthcare </p>
+            <a href="#home" class="btn">Buy Now<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-bed"></i>
+            <h3>Bed Facility</h3>
+            <p>Where healing meets compassion - your health is our top priority </p>
+            <a href="#home" class="btn">Find Hospitals<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Stay Connected For New Services</h3>
+            <p>Access to quality medical care, no matter where you are.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading mt-5"> <span>about</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="{% static 'media-care/image/about-img.svg' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h3>we take care of your healthy life</h3>
+            <p>Welcome to our HealthEase, where we are committed to providing you with the highest quality healthcare services available. </p>
+            <a href="#home" class="btn"> Read More <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+<!-- review section starts  -->
+<section class="review mt-5" id="review">
+    
+    <h1 class="heading my-5"> client's <span>review</span> </h1>
+
+    <div class="box-container pb-5">
+
+        <div class="box">
+            <img src="{% static 'assets/images/person-1.jpg' %}" alt="">
+            <h3>John Doe</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">The website is user-friendly and easy to navigate. It has all the information I need about the medical facility, its services, and staff. Highly recommend it!</p>
+        </div>
+
+        <div class="box">
+          <img src="{% static 'assets/images/person-2.jpg' %}" alt="">
+          <h3>James</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">I'm impressed with the design and layout of the website. It's professional and modern, and the information is well-organized!</p>
+        </div>
+
+        <div class="box">
+          <img src="{% static 'assets/images/person-3.jpg' %}" alt="">
+          <h3>William</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text">The website is visually appealing and easy to use. It has helped me find the medical services I need quickly and easily.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container" >
+
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>140+</h3>
+        <p>doctors at work</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1040+</h3>
+        <p>satisfied patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>500+</h3>
+        <p>bed facility</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>80+</h3>
+        <p>available hospitals</p>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Home </a>
+            <a href="#services"> <i class="fas fa-chevron-right"></i> Services </a>
+            <a href="#about"> <i class="fas fa-chevron-right"></i> About </a>
+            <a href="#doctor"> <i class="fas fa-chevron-right"></i> Doctors </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Checkups & Tests </a>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> 24/7 Ambulances services</a>
+            <a href="#doctor"> <i class="fas fa-chevron-right"></i> Doctors</a>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Hospitals</a>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Medical Store </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +977 980-xxxx-xx </a>
+            <a href="#"> <i class="fas fa-envelope"></i> healthease@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Kathmandu (KTM), Nepal - 474011</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+        </div>
+
+    </div>
+
+    <!-- <div class="credit"> Created By <span>Medicare IT Team</span> | All Rights Reserved </div> -->
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="{% static 'media-care/js/script.js' %}"></script>
+
+</body>
 </html>
